@@ -6,6 +6,8 @@ let board = [
 
 
 let s = "O"
+let sound1 = document.getElementById("a1");
+let sound2 = document.getElementById("a2");
 
 function press(x,y) {
 
@@ -13,9 +15,11 @@ function press(x,y) {
     console.log(x,y)
     if (s=="O"){
         s= "X"
+        sound1.play();
     } 
     else{
         s="O"
+        sound2.play();
     }
     board[x][y]=s;
     let cell = document.getElementById(`${x}${y}`)
@@ -23,6 +27,7 @@ function press(x,y) {
     
     if ( board[0][0]==s && board[0][1]==s && board[0][2]==s) {
         document.getElementById('here').innerText = (`${s} wins`)
+
        
     }
     if ( board[0][0]==s && board[1][0]==s && board[2][0]==s) {
@@ -54,4 +59,7 @@ function press(x,y) {
         
     }
 }
-
+function replay() {
+    location.reload();
+  return false;
+  }

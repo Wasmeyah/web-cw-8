@@ -32,22 +32,24 @@
       20 | 21 | 22
 
      -->
+     <audio id="a1" src="./mixkit-alarm-tone-996.wav" autoplay="false" ></audio>
+     <audio id="a2" src="./mixkit-arcade-retro-game-over-213.wav" autoplay="false" ></audio>
       <div class="board">
         <table>
           <tr>
-            <td id='02' onclick="press(0,2)"></td>
-            <td id='01' onclick="press(0,1)" class="v"></td>
-            <td id='00' onclick="press(0,0)"></td>
+            <td id='02' onclick="press(0,2)" onclick="playsound()"></td>
+            <td id='01' onclick="press(0,1)" onclick="playsound()" class="v"></td>
+            <td id='00' onclick="press(0,0)" onclick="playsound()"></td>
           </tr>
           <tr>
-            <td id='12' onclick="press(1,2)" class="h"></td>
-            <td id='11' onclick="press(1,1)" class="v h"></td>
-            <td id='10' onclick="press(1,0)" class="h"></td>
+            <td id='12' onclick="press(1,2)" onclick="playsound()" class="h"></td>
+            <td id='11' onclick="press(1,1)" onclick="playsound()" class="v h"></td>
+            <td id='10' onclick="press(1,0)" onclick="playsound()" class="h"></td>
           </tr>
           <tr>
-            <td id='22' onclick="press(2,2)"></td>
-            <td id='21' onclick="press(2,1)" class="v"></td>
-            <td id='20' onclick="press(2,0)"></td>
+            <td id='22' onclick="press(2,2)" onclick="playsound()" ></td>
+            <td id='21' onclick="press(2,1)" onclick="playsound()" class="v"></td>
+            <td id='20' onclick="press(2,0)" onclick="playsound()" ></td>
           </tr>
         </table>
       </div>
